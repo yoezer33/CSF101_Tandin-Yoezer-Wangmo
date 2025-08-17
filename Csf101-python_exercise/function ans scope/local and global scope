@@ -1,0 +1,29 @@
+def local_example():
+    x = 10
+    print(f"Inside Function: {x}")
+local_example()
+y = 20 
+def global_example():
+    print(f"Inside function: {y}")
+global_example()
+print(f"Outside function: {y}")
+count  = 0
+
+def increment():
+    global count
+    count += 1
+    print(f"Inside function: {count}")
+increment()
+print(f"Outside function: {count}")
+def outer():
+    x = "local"
+
+    def inner():
+        nonlocal x
+        x = "nonlocal"
+        print(f"Inner: {x}")
+
+    inner()
+    print(f"Outer: {x}")
+
+outer()

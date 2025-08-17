@@ -1,0 +1,46 @@
+def func1():
+    print("In func1")
+    func2()
+    print("Back in func1")
+
+def func2():
+    print("In func2")
+func1()
+def factorial(n):
+    if n == 0 or n == 1:
+        return 1
+    else:
+        return n * factorial(n - 1)
+
+print(factorial(5))  
+def factorial_tail(n, accumulator=1):
+    if n == 0 or n == 1:
+        return accumulator
+    else:
+        return factorial_tail(n - 1, n * accumulator)
+
+print(factorial_tail(5)) 
+def fib_recursive(n):
+    if n <= 1:
+        return n
+    else:
+        return fib_recursive(n-1) + fib_recursive(n-2)
+
+def fib_iterative(n):
+    a, b = 0, 1
+    for _ in range(n):
+        a, b = b, a + b
+    return a
+
+# Compare performance
+import time
+
+n = 30
+
+start = time.time()
+print(f"Recursive result: {fib_recursive(n)}")
+print(f"Recursive time: {time.time() - start}")
+
+start = time.time()
+print(f"Iterative result: {fib_iterative(n)}")
+print(f"Iterative time: {time.time() - start}")

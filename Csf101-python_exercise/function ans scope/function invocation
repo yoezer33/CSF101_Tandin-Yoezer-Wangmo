@@ -1,0 +1,10 @@
+def greet ():
+    print("Hello, World!")
+greet()
+def greet_person(name):
+        print(f"Hello, {name}!")
+greet_person("Tandin Yoezer Wangmo")
+def add_numbers(a, b):
+      return a + b
+result = add_numbers(5, 3)
+print(result)

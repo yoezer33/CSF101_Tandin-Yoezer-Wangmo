@@ -1,0 +1,30 @@
+def greet (name, greeting="Hello"):
+    print(f"{greeting}, {name}!")
+
+greet("Tandin Yoezer Wangmo")
+greet("tyw", "hi")
+def describe_pet(animal_type, pet_name):
+    print(f"I have a {animal_type} named {pet_name}.")
+describe_pet(animal_type="dog", pet_name="pulu")
+describe_pet(pet_name="paktsho", animal_type="cat")
+def print_args(*args, **Kwargs):
+    for arg in args:
+        print(arg)
+    for key, value in Kwargs. items():
+        print(f"{key}: {value}")
+print_args(1, 2, 3, name="tyw", age=19)
+def square(n):
+    return n ** 2
+result =  square(4)
+print(result)
+def min_max(numbers):
+    return min(numbers), max(numbers)
+lowest, highest = min_max([1, 2, 3, 4, 5,])
+print(f"Lowest: {lowest}, Highest: {highest}")
+def absolute_value(n):
+    if n>= 0:
+        return n
+    else:
+        return -n
+print(absolute_value(-5))
+print(absolute_value(3))
