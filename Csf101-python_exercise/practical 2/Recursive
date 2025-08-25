@@ -5,5 +5,5 @@ def fib(n):       # build a function
         return 1   
     else:                       #since there is none of the preceding conditions apply
        return (fib( n - 1 )) + (fib( n - 2 ))
-n = 6
+n=6
 print(f"The {n}th fibonacci number is: {fib(n)}")
